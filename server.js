@@ -9,9 +9,11 @@ const dotenv = require("dotenv");
 const configureJwtStrategy = require("./passport-config");
 
 const AppError = require("./error/AppError");
-const { errorHandler } = require("./error/errorHandler");
+const errorHandler = require("./error/errorHandler");
 
 const userRoutes = require("./routes/userRoutes");
+const contentRoutes = require("./routes/contentRoutes");
+const badgeRoutes = require("./routes/badgeRoutes");
 
 //--------------------CONFIGURATION SETUP--------------------
 
@@ -23,7 +25,7 @@ app.disable("x-powered-by");
 app.set("port", PORT || 5000);
 
 //-----------------------MIDDLEWARE---------------------------
-
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
@@ -51,13 +53,14 @@ mongoose
 //-----------------------ROUTES----------------------
 
 app.use("/api/users", userRoutes);
+app.use("/api/eco", contentRoutes);
+app.use("/api/badge", badgeRoutes);
 
 // Handling unhandled routes
 
 app.all("*", (req, res, next) => {
   next(new AppError(`Can not find ${req.originalUrl} on this server`, 404));
 });
-
 app.use(errorHandler);
 
 //-----------------------APP----------------------

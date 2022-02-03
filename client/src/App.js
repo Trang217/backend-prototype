@@ -1,5 +1,12 @@
+import React from "react";
+import MainRouter from "./component/MainRouter/MainRouter";
+
 function App() {
-  return <div className="App">app</div>;
+  return (
+    <div>
+      <MainRouter />
+    </div>
+  );
 }
 
 export default App;

@@ -12,7 +12,7 @@ exports.generateToken = (user) => {
     jwt.sign(
       payload,
       process.env.JWT_SECRET,
-      { expiresIn: "5s" },
+      { expiresIn: "5h" },
       (error, asyncToken) => {
         if (error) {
           reject(error);

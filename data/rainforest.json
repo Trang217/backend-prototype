@@ -1,0 +1,129 @@
+{
+  "ecosystem": "Rain forest",
+  "items": {
+    " item_0": [
+      "Definition",
+      "Rain forests are Earth’s oldest living ecosystems, with some surviving in their present form for at least 70 million years. They are incredibly diverse and complex, home to more than half of the world’s plant and animal species—even though they cover just 6% of Earth’s surface. Rainforests have been called the 'jewels of the Earth' and 'pharmacy of the world', because over one-quarter of natural medicines have been discovered there."
+    ],
+    "item_1": [
+      "Location",
+      "Rain forests are Earth’s oldest living ecosystems, with some surviving in their present form for at least 70 million years. They are incredibly diverse and complex, home to more than half of the world’s plant and animal species—even though they cover just 6% of Earth’s surface."
+    ],
+    "item_2": [
+      "Birds",
+      "Rain forests are unequaled in their richness of bird species. Some birds—such as hummingbirds, harpy eagles, spectacled owls, toucans, macaws, quetzals, hornbills and finches—make their home in the forests year-round. Others are temporary residents. Many of the songbirds we enjoy in our yards every summer spend their winters in the rain forests of Mexico, Central America and South America—relying on the forest for refuge during the colder months."
+    ],
+
+    "items_2": [
+      "Lemurs",
+      "Lemurs belong to the order Primates and the superfamily Lemuroidea and are native to the rainforests of Madagascar. These small monkey-like creatures are recognized by their small size, long tails, and dark coloring around their eyes. Some of the most iconic species of lemurs are the ring-tailed ones. Due to human activity and environmental problems, lemurs are on the list of critically endangered animals"
+    ],
+    "item_3": [
+      "Aye-Aye",
+      "The aye-aye (Daubentonia madagascariensis) is a species of lemur that, like other lemurs, are only found in Madagascar. Rainforest aye-ayes live in the canopy areas and only come out a night. These nocturnal primates are an endangered species for the same reason other lemurs are. Aye-ayes are about 3 ft. long, have a long tail, and scruffy blackish fur. One of the identifying features of aye-ayes is their long middle finger that they use to extract grubs out of holes."
+    ],
+    "item_4": [
+      "Iguana",
+      "Another reptile that thrives in the rainforest ecosystem is the iguana. These large lizard-like reptiles generally live in the rainforest canopy and they will come down from trees to lay eggs or mate. The green iguana (Iguana iguana) is the most common of the 2 species of iguana. These reptilian creatures grow up to 50 ft. (15 m) long and are popular household pets. The other species, the Lesser Antilles is on the endangered species list due to habitat destruction."
+    ],
+    "item_5": [
+      "Monkeys",
+      "Monkeys usually live in the uppermost parts of the rainforest canopy and there are a number of species in rainforests. Monkeys are among the 430 species of mammals that live in the Amazon rainforest."
+    ],
+    "item_6": [
+      "Blue Morpho Butterflies",
+      " One of the most beautiful butterflies in the world are morpho butterflies that belong to the butterfly family Nymphalidae. These large flying insects have wings that are iridescent shades of metallic greens or blues. There are 6 species blue morpho butterflies that have amazing brilliant blue wings. These shimmering butterflies are seen fluttering around the understory of rainforests in Brazil, Central America, and Peru. These butterflies also fly high above the forest canopy in large groups."
+    ],
+
+    "item_7": [
+      "Emergent Layer",
+      "The top layer of the rainforest is the emergent layer. Here, trees as tall as 60 meters (200 feet) dominate the skyline. Foliage is often sparse on tree trunks but spreads wide as the trees reach the sunny upper layer, where they photosynthesize the sun’s rays. Small, waxy leaves help trees in the emergent layer retain water during long droughts or dry seasons. Lightweight seeds are carried away from the parent plant by strong winds."
+    ],
+    "item_8": [
+      "Canopy Layer",
+      "Beneath the emergent layer is the canopy, a deep layer of vegetation roughly 6 meters (20 feet) thick. The canopy’s dense network of leaves and branches forms a roof over the two remaining layers. The canopy blocks winds, rainfall, and sunlight creating a humid, still, and dark environment below. Trees have adapted to this damp environment by producing glossy leaves with pointed tips that repel water."
+    ],
+    "item_9": [
+      "Understory Layer",
+      "Located several meters below the canopy, the understory is an even darker, stiller, and more humid environment. Plants here, such as palms and philodendrons, are much shorter and have larger leaves than plants that dominate the canopy. Understory plants’ large leaves catch the minimal sunlight reaching beyond the dense canopy."
+    ],
+    "item_10": [
+      "Forest Floor Layer",
+      "he forest floor is the darkest of all rainforest layers, making it extremely difficult for plants to grow. Leaves that fall to the forest floor decay quickly. Decomposers, such as termites, slugs, scorpions, worms, and fungi, thrive on the forest floor. Organic matter falls from trees and plants, and these organisms break down the decaying material into nutrients. The shallow roots of rainforest trees absorb these nutrients, and dozens of predators consume the decomposers!"
+    ],
+    "item_11": [
+      "Passion Flower",
+      "Passion flowers (Passiflora spp.) are are one of the favorite flowers to encounter in the rainforest. Missionaries thought the flower resembled a crown of thorns worn by Jesus for his crucifixion leading to their name. Many different animals pollinate the colorful flowers, including bees, wasps, hummingbirds and even bats. However, many species of passion flower are specific to a certain pollinator."
+    ],
+    "item_12": [
+      "Epiphytes",
+      "When one plant grows on another without harming it, it's an epiphyte. In the rainforest, they do not need to grow in the thin soils of the forest floor. Instead, they live on other plants. Their ability to grow above the ground gives them access to sunlight and obtain the water they need from rain and water vapor in the air. They can also absorb water via their roots, or in the cases of some species through the specialized hairs on the surfaces of leaves that have adapted to take in moisture.  "
+    ]
+  },
+
+  "questions": [
+    {
+      "question": "What portion of the world's plant species are found in tropical rainforest?",
+      "correct_answer": "Two-thirds",
+      "incorrect_answers": ["One third", "One half"],
+      "message": "The rainforests hold more than two-thirds of the world’s plant species."
+    },
+    {
+      "question": "How many layers are there in a Rainforest?",
+      "correct_answer": "Four",
+      "incorrect_answers": ["Two", "Five"],
+      "message": "Most rainforests are structured in four layers: emergent, canopy, understory, and forest floor. Each layer has unique characteristics based on differing levels of water, sunlight, and air circulation."
+    },
+    {
+      "question": "Which of these isn't a layer of the rainforest?",
+      "correct_answer": "Underbook layer",
+      "incorrect_answers": ["Emergent layer", "Understory layer"],
+      "message": "Most rainforests are structured in four layers: emergent, canopy, understory, and forest floor."
+    },
+    {
+      "question": "What is the weather in the rainforest?",
+      "correct_answer": "Warm and rainy",
+      "incorrect_answers": ["Snowy", "Hot and dry"],
+      "message": "The rainforest climate is typically warm and wet. The high rainfall and year-round high temperatures are ideal conditions for vegetation growth."
+    },
+    {
+      "question": "Where is the rain forest located?",
+      "correct_answer": "Central America, the Amazon, Africa, Southern Asia, and Australasia.",
+      "incorrect_answers": [
+        "North America , South America, and Iceland",
+        "Greenland, France, and China"
+      ],
+      "message": "Deserts take up about one third (33%) of the Earth's land surface."
+    },
+    {
+      "question": "Lots of medicines have been discovered in rainforests, so they are also known as",
+      "correct_answer": "Pharmacy of the World",
+      "incorrect_answers": ["Life of the World", "Hospital of the World"],
+      "message": "Rainforests have been called the 'pharmacy of the world', because over one-quarter of natural medicines have been discovered there. "
+    },
+    {
+      "question": "Why are most plants on the forest floor not green? ",
+      "correct_answer": "There is no sunlight",
+      "incorrect_answers": ["They are different", "They are eaten"],
+      "message": "The forest floor is the darkest of all rainforest layers, making it extremely difficult for plants to grow."
+    },
+    {
+      "question": "What does the plant, Epiphytes, depend on?",
+      "correct_answer": "Host tree for support",
+      "incorrect_answers": ["Animals", "Water"],
+      "message": "Epiphytes have no attachment to the ground or to other obvious sources of nourishment, they engage in a parasitic relationship with the plants that support them."
+    },
+    {
+      "question": "What is true about the Aye-Aye?",
+      "correct_answer": "It is nocturnal",
+      "incorrect_answers": ["It has purple eyes", "It lives in South America"],
+      "message": "Aye-ayes are nocturnal spending up to 80% of the nighttime hours foraging for food."
+    },
+    {
+      "question": "The name of the biggest rainforest is... ?",
+      "correct_answer": "The Amazon",
+      "incorrect_answers": ["The Daintree", "The Congo"],
+      "message": "The Amazon is the world's largest rainforest. It's home to more than 30 million people and one in ten known species on Earth."
+    }
+  ]
+}
