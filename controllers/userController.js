@@ -39,7 +39,8 @@ exports.registerUser = tryCatchHelper(async (req, res, next) => {
 
   await user.save();
 
-  const url = `${req.protocol}://${req.get("host")}`;
+  const url = `${req.protocol}://localhost:3000`;
+  console.log(url);
   await new Email(user, url).sendWelcome();
 
   return res.status(200).json({
@@ -180,21 +181,19 @@ exports.forgotPassword = tryCatchHelper(async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
   console.log(user);
 
-  console.log(resetURL);
-
   try {
     // Send it to user 's email
     const resetURL = `${req.protocol}://${req.get(
       "host"
     )}/api/users/resetPassword/${resetToken}`;
     await new Email(user, resetURL).sendPasswordReset();
-
+    //console.log(resetURL);
     res.status(200).json({ status: "success", message: "Token sent to email" });
   } catch (error) {
     (user.passwordResetToken = undefined),
       (user.passwordResetExpires = undefined);
     await user.save({ validateBeforeSave: false });
-    // console.log(error);
+    console.log(error);
     return next(new AppError("Error with sending email, try later", 500));
   }
 });

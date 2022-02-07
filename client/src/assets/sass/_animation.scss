@@ -1,0 +1,39 @@
+.wobble-hor-bottom {
+  animation: wobble-hor-bottom 0.8s;
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translateX(0%);
+
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-10px) rotate(-3deg);
+  }
+  30% {
+    transform: translateX(1px) rotate(1deg);
+  }
+  45% {
+    transform: translateX(-9px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(5px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-3px) rotate(-1.2deg);
+  }
+}
+
+@keyframes not-found {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 150%;
+  }
+  100% {
+    background-size: 200%;
+  }
+}

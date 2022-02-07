@@ -7,12 +7,21 @@ module.exports = class Email {
     this.to = user.email;
     this.firstName = user.firstName.split(" ")[0];
     this.url = url;
-    this.from = `OIKO <${process.env.EMAIL_FROM}>`;
+    this.from =
+      process.env.NODE_ENV === "production"
+        ? `OIKO <${process.env.EMAIL_FROM_PROD}>`
+        : `OIKO <${process.env.EMAIL_FROM}>`;
   }
 
-  createTransport() {
+  newTransport() {
     if (process.env.NODE_ENV === "production") {
-      return 1;
+      return nodemailer.createTransport({
+        service: "SendGrid",
+        auth: {
+          user: process.env.SENDGRID_USERNAME,
+          pass: process.env.SENDGRID_PASSWORD,
+        },
+      });
     }
 
     return nodemailer.createTransport({
@@ -25,9 +34,9 @@ module.exports = class Email {
     });
   }
 
-  send(template, subject) {
+  async send(template, subject) {
     // render html based on a pug template
-    const html = pug.renderFile(`${__dirname}/email/${template}.pug`, {
+    const html = pug.renderFile(`${__dirname}/${template}.pug`, {
       firstName: this.firstName,
       url: this.url,
       subject,
@@ -46,14 +55,14 @@ module.exports = class Email {
     await this.newTransport().sendMail(mailOptions);
   }
 
-  sendWelcome() {
-    await this.send("Welcome", "Welcome to OIKO!");
+  async sendWelcome() {
+    await this.send("welcome", "Welcome to OIKO!");
   }
 
   async sendPasswordReset() {
     await this.send(
       "passwordReset",
-      "Your password reset token (valid for only 10 minutes)"
+      "Reset your password (valid for only 10 minutes)"
     );
   }
 };
