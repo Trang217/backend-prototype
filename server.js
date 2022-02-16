@@ -62,6 +62,13 @@ app.all("*", (req, res, next) => {
 
 app.use(errorHandler);
 
+// Do not add code below this line!
+// Serve frontend client/build folder
+app.use(express.static(path.join(__dirname, "client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+
 //-----------------------APP----------------------
 
 app.listen(app.get("port"), () => {

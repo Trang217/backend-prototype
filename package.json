@@ -4,13 +4,14 @@
   "description": "This is a beautiful informative ecosystem education app",
   "main": "index.js",
   "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server",
     "prod": "NODE_ENV=production nodemon server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trang217/Final-Project.git"
+    "url": "git+https://github.com/Trang217/backend-prototype.git"
   },
   "author": "Aleksandra, Luisa, Patrick, Trang",
   "license": "ISC",
