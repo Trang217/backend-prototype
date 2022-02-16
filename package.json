@@ -16,9 +16,9 @@
   "author": "Aleksandra, Luisa, Patrick, Trang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Trang217/Final-Project/issues"
+    "url": "https://github.com/Trang217/backend-prototype/issues"
   },
-  "homepage": "https://github.com/Trang217/Final-Project#readme",
+  "homepage": "https://github.com/Trang217/backend-prototype#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
