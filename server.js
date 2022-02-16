@@ -56,9 +56,9 @@ app.use("/api/content", contentRoutes);
 
 // Handling unhandled routes
 
-app.all("*", (req, res, next) => {
-  next(new AppError(`Can not find ${req.originalUrl} on this server`, 404));
-});
+// app.all("*", (req, res, next) => {
+//   next(new AppError(`Can not find ${req.originalUrl} on this server`, 404));
+// });
 
 app.use(errorHandler);
 
