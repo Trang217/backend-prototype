@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c86d3b30.css",
+    "main.js": "/static/js/main.65ccd171.js",
+    "static/media/compass.png": "/static/media/compass.f67300960d61f151bb90.png",
+    "static/media/SeoulHangang-Medium.woff2": "/static/media/SeoulHangang-Medium.719e186b3ee1ac37c981.woff2",
+    "static/media/snake.png": "/static/media/snake.46dcedb78673dd5cbbfd.png",
+    "static/media/pap-hor.png": "/static/media/pap-hor.9c7433e47b70e67954e3.png",
+    "static/media/SeoulHangang-Bold.woff2": "/static/media/SeoulHangang-Bold.a8a82a5b78c00ef22e75.woff2",
+    "static/media/pap-1.png": "/static/media/pap-1.68d24f3a82236d6ddd00.png",
+    "static/media/blob.png": "/static/media/blob.784ee332e581ef8cb6a8.png",
+    "static/media/pap-left.png": "/static/media/pap-left.be40eea7fc369e7036bb.png",
+    "static/media/pap-right.png": "/static/media/pap-right.537fb828f9f267ae7d84.png",
+    "static/media/sloth.png": "/static/media/sloth.df6aaa9d36d7aab12304.png",
+    "static/media/map-mobile.jpg": "/static/media/map-mobile.f372b6bacf8386ab3dfb.jpg",
+    "static/media/paper-journal.png": "/static/media/paper-journal.1eee43ead82b6a9e0447.png",
+    "static/media/map.jpg": "/static/media/map.72a42a6452006d99cf7d.jpg",
+    "static/media/blue-log.png": "/static/media/blue-log.0f4f79ade2957a6f2e7e.png",
+    "static/media/fish.png": "/static/media/fish.a894746524bc02171b94.png",
+    "static/media/rosette.png": "/static/media/rosette.a23fec2fb6899ab3eb55.png",
+    "static/media/d-green-btn.jpg": "/static/media/d-green-btn.3f8cbc875e8a6dc3b256.jpg",
+    "static/media/blob_2.png": "/static/media/blob_2.1396e612eb174d77e8c4.png",
+    "static/media/world-1-sheet.png": "/static/media/world-1-sheet.403973ded2951ff4969a.png",
+    "static/media/Klex-Run.png": "/static/media/Klex-Run.029ce11f826383224c31.png",
+    "static/media/Klex-Stand.png": "/static/media/Klex-Stand.f62e7933fc33a74a2e20.png",
+    "static/media/patrick.jpeg": "/static/media/patrick.875db3b74bd1177d7f48.jpeg",
+    "static/media/luisa.jpeg": "/static/media/luisa.7898b1f3df7072ad1e85.jpeg",
+    "static/media/aleksandra.jpeg": "/static/media/aleksandra.72a9e65351bf46746046.jpeg",
+    "static/media/trang.jpeg": "/static/media/trang.2bdefd645c1c06fb21ea.jpeg",
+    "static/media/Rochester-Regular.woff2": "/static/media/Rochester-Regular.a46f59e7b87f10c5ad2c.woff2",
+    "static/media/r-1.png": "/static/media/r-1.cde9bd4f0cc64e7bbeb9.png",
+    "static/media/r-3.png": "/static/media/r-3.21bf950bb631d44ac2f0.png",
+    "index.html": "/index.html",
+    "main.c86d3b30.css.map": "/static/css/main.c86d3b30.css.map",
+    "main.65ccd171.js.map": "/static/js/main.65ccd171.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c86d3b30.css",
+    "static/js/main.65ccd171.js"
+  ]
+}
