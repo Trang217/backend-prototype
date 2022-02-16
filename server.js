@@ -7,6 +7,7 @@ const passport = require("passport");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 const configureJwtStrategy = require("./passport-config");
+const path = require("path");
 
 const AppError = require("./error/AppError");
 const errorHandler = require("./error/errorHandler");
