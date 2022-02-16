@@ -23,8 +23,7 @@ axiosApiInstance.interceptors.response.use(
     return config;
   },
   (error) => {
-    console.log("Error response has been received", error.response);
-
+    //console.log("Error response has been received", error.response);
     return Promise.reject(error);
   }
 );

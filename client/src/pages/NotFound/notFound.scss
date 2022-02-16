@@ -1,0 +1,36 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.notFound {
+  @include center-fixed;
+  @include flex-even;
+
+  height: 80vh;
+  width: 50vw;
+  background-image: url("../../assets/images/blob.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: notFound 0.6s both linear;
+
+  text-align: center;
+  color: white;
+
+  h2 {
+    font-family: "Rochester";
+    font-size: $font-size-md;
+    margin: 2rem;
+  }
+  p {
+    font-size: $font-size-sm;
+  }
+
+  button {
+    @include btn-green;
+    background-image: none;
+    background-color: $light-bg;
+    margin: 3rem;
+  }
+}

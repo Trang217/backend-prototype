@@ -1,0 +1,110 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.story {
+  @include flex-center;
+  background-image: url("../../assets/images/blue-log.png");
+  @include bg-center;
+  background-size: 100%;
+  width: 90rem;
+  height: 70rem;
+  padding-bottom: 5rem;
+  .story-title {
+    @include flex-center;
+    text-align: center;
+    font-family: $font-title;
+    height: 18rem;
+    font-size: 3.2rem;
+    width: 80%;
+    color: $light-txt;
+
+    button {
+      margin-bottom: 1rem;
+      animation: pulse 2s infinite linear alternate;
+      font-size: 6rem;
+      color: $light-txt;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+    }
+  }
+  .journal {
+    font-size: $font-size-xs;
+    @include flex-center;
+    background-image: url("../../assets/images/paper-journal.png");
+    @include bg-center;
+    height: 30rem;
+    width: 60rem;
+    position: relative;
+    text-align: justify;
+    p {
+      width: 50rem;
+      margin-top: 1rem;
+      height: 12rem;
+    }
+    button {
+      @include btn-shadow;
+      margin-top: 5rem;
+    }
+  }
+  .circle-button {
+    position: relative;
+    bottom: -7%;
+    animation: show-text 1.5s ease-in both 1.5s;
+    cursor: pointer;
+    div {
+      @include bg-center;
+      @include center-fixed;
+    }
+    div:nth-child(1) {
+      width: 50px;
+      height: 50px;
+      background-image: url("../../assets/images/r-1.png");
+      animation: show-text 2s infinite linear alternate 3s;
+    }
+    div:nth-child(2) {
+      width: 36px;
+      height: 36px;
+      background-image: url("../../assets/images/r-3.png");
+      animation: show-text 2s infinite linear alternate 2.8s;
+    }
+    div:nth-child(3) {
+      width: 10px;
+      height: 10px;
+      background-image: url("../../assets/images/r-2.png");
+      animation: show-text 2s infinite linear alternate 2.5s;
+    }
+  }
+}
+
+.show {
+  animation: show-text 1.5s ease-in both;
+}
+
+.show-journal {
+  animation: show-text 1.5s ease-in both 2s;
+}
+
+#ohno {
+  animation: enter-text 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 0.5s;
+}
+
+.fade-out {
+  animation: fade-out 1s ease-out both 10s;
+}
+
+.inkblot {
+  position: absolute;
+  left: 46%;
+  top: 18%;
+  background-image: url("../../assets/images/blob_2.png");
+  @include bg-center;
+  height: 110px;
+  width: 100px;
+  animation: enter-text 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 0.5s;
+}

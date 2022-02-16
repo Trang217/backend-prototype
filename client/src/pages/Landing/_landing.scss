@@ -1,0 +1,57 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.landing {
+  .openModalButton {
+    @include bubble;
+    animation: float 8s linear infinite reverse both;
+    color: $primary;
+    font-size: $font-size-sm;
+    position: fixed;
+    top: 3rem;
+    right: 5rem;
+    padding: 2rem;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .landingContent {
+    width: 40%;
+    @include center-fixed;
+    text-align: center;
+    font-size: $font-size-sm;
+    line-height: 5rem;
+
+    .title {
+      font-family: $font-title;
+      font-size: $font-size-md;
+      margin: 2rem;
+    }
+
+    .startBtn {
+      @include btn-green;
+      margin: 2rem;
+    }
+  }
+}
+
+.modalContent {
+  @include bg-img-paper-hor;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+
+  .closeModalBtn {
+    @include btn-green;
+    color: $light-txt;
+    font-size: $font-size-sm;
+    height: 5rem;
+    width: 5rem;
+    position: relative;
+    top: 5%;
+    left: 85%;
+  }
+}

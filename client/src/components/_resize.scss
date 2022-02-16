@@ -1,0 +1,45 @@
+@import "../assets/scss/animations";
+@import "../assets/scss/fonts";
+@import "../assets/scss/variables";
+@import "../assets/scss/mixin";
+
+.resize {
+  padding: 3rem;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-image: url("../assets/images/d-green-btn.jpg");
+  background-position: center;
+  background-size: cover;
+  @include flex-center;
+  color: $light-txt;
+  font-size: $font-size-xs;
+  div {
+    margin-top: 2rem;
+  }
+  .size {
+    @include flex-center;
+    div {
+      background-image: url("../assets/images/resize.png");
+      height: 50px;
+      width: 100px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 70%;
+    }
+  }
+  .orient {
+    @include flex-center;
+    div {
+      background-image: url("../assets/images/rotate.png");
+      height: 100px;
+      width: 100px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 70%;
+    }
+  }
+  @media screen and (min-width: 650px) {
+    font-size: $font-size-md;
+  }
+}

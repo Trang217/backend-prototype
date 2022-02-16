@@ -1,0 +1,66 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.quiz {
+  font-size: $font-size-xs;
+  @include flex-center;
+  @include center-fixed;
+  .title {
+    font-family: $font-title;
+    font-size: $font-size-md;
+    margin: 3rem;
+    text-align: center;
+    @media screen and (max-width: $tablet) {
+      width: 50rem;
+      margin: 0.5rem;
+    }
+  }
+  span {
+    font-size: $font-size-sm;
+    width: 60rem;
+    text-align: center;
+  }
+  .answer {
+    margin: 1rem;
+    width: 24rem;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    background-color: $light-bg;
+    box-shadow: $shadow-btn;
+    border: 3px $input-border solid;
+  }
+  .selected {
+    border: 3px $primary solid;
+  }
+}
+
+.container {
+  height: 420px;
+  @include flex-even;
+
+  .q-msg {
+    @include flex-center;
+    height: 5rem;
+  }
+  h3 {
+    font-size: $font-size-sm;
+  }
+}
+
+.answer-container {
+  @include flex-center;
+  height: 200px;
+  width: 40rem;
+  text-align: justify;
+  font-size: $font-size-sm;
+}
+
+.submit-btn {
+  @include btn-green;
+}
+.nav-btn {
+  @include btn-green;
+  width: 25rem;
+}

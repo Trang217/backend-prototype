@@ -1,0 +1,33 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.home {
+  @include bg-img;
+  .start {
+    @include center-fixed;
+    @include flex-center;
+  }
+  .inkBlot {
+    background-image: url("../../assets/images/blob_2.png");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+  }
+  button {
+    @include btn-green;
+  }
+}
+.story-overlay {
+  @include center-fixed;
+}
+
+.closeModal {
+  @include btn-modal;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

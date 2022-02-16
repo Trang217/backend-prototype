@@ -1,0 +1,10 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.error-message {
+  color: #c23e3e;
+  font-size: $font-size-xs;
+  padding-top: 1rem;
+}

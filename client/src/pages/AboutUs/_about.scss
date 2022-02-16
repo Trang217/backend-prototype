@@ -1,0 +1,84 @@
+.about {
+  text-align: center;
+  @include center-fixed;
+  @media screen and (max-width: $tablet) {
+    width: 70rem;
+    padding: 0.5rem;
+  }
+
+  h1,
+  h2 {
+    font-family: $font-title;
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: $font-size-md;
+  }
+
+  h2 {
+    font-size: 4rem;
+    margin: 1rem;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    padding: 1rem;
+    @media screen and (max-width: $tablet) {
+      font-size: $font-size-xs;
+    }
+
+    a {
+      color: $primary;
+      font-style: italic;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  button {
+    @include btn-green;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    @media screen and (max-width: $tablet) {
+      font-size: $font-size-xs;
+      margin-top: 1rem;
+    }
+  }
+
+  .imagesContainer {
+    display: flex;
+    justify-content: center;
+
+    a {
+      font-family: $font-title;
+      color: $primary;
+      font-size: 1.7rem;
+
+      &:hover {
+        color: $dark;
+        font-weight: 600;
+      }
+    }
+
+    img {
+      width: 13rem;
+      height: 13rem;
+      border-radius: 50%;
+      margin: 1rem;
+      filter: sepia(20%);
+
+      &:hover {
+        animation: pulse 1s linear both;
+      }
+
+      @media screen and (max-width: $tablet) {
+        width: 8rem;
+        height: 8rem;
+        margin: 0.3rem;
+      }
+    }
+  }
+}

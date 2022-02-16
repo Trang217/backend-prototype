@@ -1,0 +1,36 @@
+@import "./animations";
+@import "./fonts";
+@import "./mixin";
+@import "./variables";
+
+@import "../../pages/AboutUs/about";
+@import "../../pages/Quiz/quiz";
+@import "../../hoc/Navigation/sidebar";
+
+@import "../../pages/LoginAndRegistration/login";
+@import "../../pages/LoginAndRegistration/errorMessage";
+
+@import "../../pages/ForgetAndResetPassword/forgetAndResetPassword";
+
+@import "../../pages/Home/home";
+@import "../../pages/Home/story";
+
+@import "../../pages/Landing/landing";
+@import "../../pages/AccountDetails/accountDetails";
+@import "../../pages/MyBadges/myBadges";
+@import "../../components/bubble";
+@import "../../components/resize";
+@import "../../hoc/MainRouter/background";
+@import "../../pages/NotFound/notFound";
+
+@import "../../components/LandingMobile/landingMobile";
+
+:root {
+  font-size: 62.5%;
+  color: $dark;
+  margin: 0 auto;
+  font-family: $font-main;
+}
+::selection {
+  background-color: $secondary;
+}

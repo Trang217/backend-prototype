@@ -1,0 +1,71 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+@media only screen and (max-width: 600px) {
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/images/map-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .landingContent {
+      opacity: 100%;
+      @include center-fixed;
+      width: 80%;
+      text-align: center;
+      font-size: 1.5rem;
+
+      .title {
+        font-family: $font-title;
+        font-size: 2.5rem;
+        margin: 2rem;
+      }
+
+      p {
+        margin: 0.5rem;
+      }
+
+      button {
+        @include btn-green;
+        margin: 1rem;
+        font-size: 1.2rem;
+      }
+
+      // .aboutContent {
+      //   background-image: $bg-paper;
+      //   background-size: cover;
+      //   background-position: center;
+      //   height: 90rem;
+      //   width: 100rem;
+      // }
+
+      #sloth,
+      #snake,
+      #fish {
+        @include bubble;
+        @include b-mobile;
+        animation: float 10s linear infinite alternate both;
+      }
+
+      #sloth {
+        background-image: url("../../assets/images/sloth.png");
+        top: 95%;
+        left: -5%;
+      }
+      #snake {
+        background-image: url("../../assets/images/snake.png");
+        top: -25%;
+        left: 0%;
+      }
+      #fish {
+        background-image: url("../../assets/images/fish.png");
+        top: -20%;
+        left: 50%;
+      }
+    }
+  }
+}

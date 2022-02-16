@@ -1,0 +1,264 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.signUp-signIn {
+  @include flex-center;
+  width: 1600px;
+  min-height: 100vh;
+
+  .container {
+    margin-top: 1.25rem;
+    position: relative;
+    width: 66%;
+    min-width: 70rem;
+    height: 72rem;
+
+    .sign-in-container {
+      background-image: url("../../assets/images/pap-left.png");
+      @include bg-center;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      z-index: 2;
+      transition: all 600ms ease-in-out;
+
+      .sign-in-form {
+        @include flex-center;
+        text-align: center;
+        height: 100%;
+        padding: 0 2.5rem 0 2.5rem;
+        h1 {
+          font-size: $font-size-md;
+          line-height: 4.25rem;
+          font-family: $font-title;
+          margin-bottom: 4rem;
+        }
+
+        .label-input-container {
+          @include flex-center;
+          margin-top: 0.5rem;
+
+          label {
+            font-size: $font-size-xs;
+            font-family: $font-main;
+          }
+
+          .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.25rem;
+
+            input {
+              @include input-login;
+              flex: 1 1 0%;
+              margin: 0.5rem;
+              width: 28rem;
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        .forgetPassword {
+          cursor: pointer;
+          font-size: 1.2rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        button {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+
+    .sign-up-container {
+      background-image: url("../../assets/images/pap-right.png");
+      @include bg-center;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      opacity: 0;
+      z-index: 1;
+      transition: all 600ms ease-in-out;
+
+      .sign-up-form {
+        @include flex-center;
+        text-align: center;
+        height: 100%;
+        padding: 0 2.5rem 0 2.5rem;
+
+        h2 {
+          font-size: 3rem;
+          margin-bottom: 0.5rem;
+          font-family: $font-main;
+        }
+
+        p {
+          margin: 0.5rem 0 1rem 0;
+          font-size: $font-size-xs;
+          line-height: 2.5rem;
+        }
+
+        .label-input-container {
+          @include flex-center;
+          margin-top: 0.5rem;
+
+          label {
+            font-size: $font-size-xs;
+            font-family: $font-main;
+          }
+
+          .input-container {
+            display: flex;
+            align-items: center;
+
+            input {
+              @include input-login;
+              flex: 1 1 0%;
+              margin: 0.5rem;
+              width: 28rem;
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        button {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .right-panel-active {
+    .sign-in-container {
+      transform: translateX(100%);
+    }
+
+    .sign-up-container {
+      transform: translateX(100%);
+      opacity: 1;
+      z-index: 5;
+      animation: show 0.6s;
+    }
+  }
+
+  .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+
+    .overlay {
+      background-image: url("../../assets/images/blue-log.png");
+      @include bg-center;
+      color: $light-txt;
+      position: relative;
+      left: -100%;
+      height: 100%;
+      width: 200%;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+
+      .overlay-panel {
+        @include flex-center;
+        position: absolute;
+        padding: 0 2.5rem;
+        text-align: center;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+      }
+    }
+  }
+
+  .right-panel-active {
+    .overlay-container {
+      transform: translateX(-100%);
+
+      .overlay {
+        transform: translateX(50%);
+
+        .overlay-left {
+          transform: translateX(0);
+        }
+
+        .overlay-right {
+          transform: translateX(20%);
+        }
+      }
+    }
+  }
+
+  .overlay-left {
+    transform: translateX(-20%);
+
+    h1 {
+      @include title-light-md;
+    }
+
+    p {
+      margin: 0.5rem 0 0.5rem 0;
+      font-size: 2.95rem;
+      color: $light-txt;
+      font-family: $font-title;
+    }
+  }
+
+  .overlay-right {
+    right: 0;
+    transform: translateX(0);
+    transform: translateX(-20%);
+
+    h1 {
+      @include title-light-md;
+    }
+
+    p {
+      margin: 0.5rem 0 0.5rem 0;
+      color: $light-txt;
+      font-family: $font-title;
+      font-size: 2.95rem;
+    }
+  }
+}
+
+.submit-btn {
+  @include btn-green;
+}
+
+.submit-btn-light {
+  background-image: $bg-paper;
+  @include bg-center;
+  margin: 2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+  color: $dark;
+  font-size: $font-size-sm;
+  box-shadow: $shadow-btn;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+}
+
+// Input setting for Chrome
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: all 5000s ease-in-out 0s;
+  transition-property: $light-bg, $dark;
+}

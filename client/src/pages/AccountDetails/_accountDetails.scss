@@ -1,0 +1,85 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.accountDetails {
+  @include flex-center;
+
+  h1 {
+    font-size: $font-size-md;
+    font-family: $font-title;
+    margin-bottom: 3rem;
+  }
+
+  table {
+    font-size: $font-size-sm;
+
+    td {
+      padding: 0.8rem;
+      color: $primary;
+    }
+
+    td:first-of-type {
+      text-align: right;
+      border-right: 1px solid $secondary;
+    }
+    td:nth-of-type(2) {
+      text-align: left;
+    }
+  }
+  button {
+    @include btn-shadow;
+    font-size: $font-size-xs;
+    color: $dark;
+    margin-top: 3rem;
+  }
+  .accountModalBtn {
+    @include btn-shadow;
+    font-size: $font-size-sm;
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 12%;
+    left: 49%;
+  }
+}
+
+.accountModal {
+  background-image: url("../../assets/images/pap-hor.png");
+  @include bg-center;
+  @include flex-center;
+  width: 65rem;
+  height: 60rem;
+  background-size: contain;
+  text-align: center;
+
+  h1 {
+    font-size: $font-size-md;
+    font-family: $font-title;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+  label {
+    font-size: $font-size-xs;
+    font-family: $font-main;
+  }
+
+  input {
+    @include input-login;
+    flex: 1 1 0%;
+    margin: 1rem;
+    width: 30rem;
+    font-size: $font-size-xs;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    margin-bottom: 2.5rem;
+  }
+
+  .saveBtn {
+    @include btn-green;
+    margin: 2rem 0;
+  }
+}

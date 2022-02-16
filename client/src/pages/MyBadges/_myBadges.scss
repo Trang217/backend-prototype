@@ -1,0 +1,78 @@
+@import "../../assets/scss/animations";
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixin";
+
+.myBadges {
+  @include center-fixed;
+  height: 75%;
+  text-align: center;
+
+  .greeting {
+    margin: 2rem;
+    font-size: $font-size-md;
+    font-family: $font-title;
+  }
+
+  p {
+    margin: 1rem;
+    font-size: $font-size-sm;
+  }
+
+  .allBadges {
+    display: flex;
+    flex-direction: row;
+
+    .oneBadge {
+      .grayscale {
+        filter: grayscale(100%);
+      }
+      @include bg-img-paper;
+      width: 30rem;
+      height: 40rem;
+      margin: 1rem;
+
+      .type {
+        font-family: $font-title;
+        font-size: $font-size-md;
+        padding: 0.5rem;
+        padding-bottom: 0;
+      }
+
+      .icon {
+        height: 35%;
+        .rosette {
+          height: 130px;
+          width: 80px;
+          background-image: url("../../assets/images/rosette.png");
+          background-size: contain;
+          background-repeat: none;
+          position: relative;
+          bottom: 80px;
+          left: 50px;
+          animation: rosette 2s linear infinite both alternate-reverse;
+        }
+      }
+
+      .activeBadge {
+        p {
+          font-size: $font-size-xs;
+          padding: 0.5rem;
+          padding-bottom: 0;
+        }
+        button {
+          @include btn-shadow;
+          margin: 0;
+          font-size: $font-size-xs;
+        }
+      }
+      .inactiveBadge {
+        p {
+          font-size: $font-size-xs;
+          margin: 2rem;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
