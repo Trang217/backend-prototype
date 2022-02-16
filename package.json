@@ -4,7 +4,7 @@
   "description": "This is a beautiful informative ecosystem education app",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm install --dev && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server",
     "prod": "NODE_ENV=production node server"
