@@ -1,9 +1,9 @@
 const express = require("express");
+const controller = require("../controllers/contentController");
 
 const router = express.Router();
 
-const controller = require("./../controllers/contentController");
-
-router.post("/add", controller.createEcosystem);
+router.get("/game/:biome", controller.getGameContent);
+router.get("/quiz/:biome", controller.getQuizContent);
 
 module.exports = router;

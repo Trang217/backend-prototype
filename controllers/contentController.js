@@ -1,34 +1,37 @@
-const { tryCatchHelper } = require("../helpers/tryCatchHelper");
 const Content = require("../models/Content");
+const AppError = require("../error/AppError");
+const { tryCatchHelper } = require("../helpers/tryCatchHelper");
 
-exports.createEcosystem = tryCatchHelper(async (req, res) => {
-  const { body } = req;
-
-  const newEco = await Content.create({
-    ecosystem: body.ecosystem,
-    definition: body.definition,
-    items: body.items,
-    //items: [...body.items],
-    quiz: [...body.questions],
-  });
-
-  return res
-    .status(200)
-    .json({ message: "New ecosystem is created successfully!", newEco });
-});
+//* get game content (name + items)
 
 exports.getGameContent = tryCatchHelper(async (req, res, next) => {
-  console.log(req.body);
-  const search = req.body.search;
-  const items = await Content.findOne({ ecosystem: search }).select(
+  const search = req.params.biome;
+  const gameContent = await Content.findOne({ ecosystem: search }).select(
     "ecosystem items"
   );
 
-  if (!items) {
-    return next(new AppError("No items here!", 404));
+  if (!gameContent) {
+    return next(new AppError("No content!", 404));
   }
 
   return res
     .status(200)
-    .json({ status: "success", message: "Found items", items });
+    .json({ status: "success", message: "Found quiz content!", gameContent });
+});
+
+//* get quiz content (name + questions)
+
+exports.getQuizContent = tryCatchHelper(async (req, res, next) => {
+  const search = req.params.biome;
+  const quizContent = await Content.findOne({ ecosystem: search }).select(
+    "ecosystem questions"
+  );
+
+  if (!quizContent) {
+    return next(new AppError("No content!", 404));
+  }
+
+  return res
+    .status(200)
+    .json({ status: "success", message: "Found quiz content!", quizContent });
 });

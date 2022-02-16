@@ -1,30 +1,28 @@
 {
-  "name": "backend-prototype",
+  "name": "final-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a beautiful informative ecosystem education app",
   "main": "index.js",
   "scripts": {
-    "dev": "node server",
-    "prod": "NODE_ENV=production node server",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server",
+    "prod": "NODE_ENV=production nodemon server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trang217/backend-prototype.git"
+    "url": "git+https://github.com/Trang217/Final-Project.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Aleksandra, Luisa, Patrick, Trang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Trang217/backend-prototype/issues"
+    "url": "https://github.com/Trang217/Final-Project/issues"
   },
-  "homepage": "https://github.com/Trang217/backend-prototype#readme",
+  "homepage": "https://github.com/Trang217/Final-Project#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
+    "dotenv": "^11.0.0",
     "express": "^4.17.2",
     "html-to-text": "^8.1.0",
     "jsonwebtoken": "^8.5.1",
@@ -34,8 +32,5 @@
     "passport-jwt": "^4.0.0",
     "pug": "^3.0.2",
     "validator": "^13.7.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   }
 }

@@ -3,10 +3,8 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const path = require("path");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
-const compression = require("compression");
 const dotenv = require("dotenv");
 const configureJwtStrategy = require("./passport-config");
 
@@ -15,7 +13,6 @@ const errorHandler = require("./error/errorHandler");
 
 const userRoutes = require("./routes/userRoutes");
 const contentRoutes = require("./routes/contentRoutes");
-const badgeRoutes = require("./routes/badgeRoutes");
 
 //--------------------CONFIGURATION SETUP--------------------
 
@@ -27,7 +24,7 @@ app.disable("x-powered-by");
 app.set("port", PORT || 5000);
 
 //-----------------------MIDDLEWARE---------------------------
-app.use(express.urlencoded({ extended: true }));
+
 app.use(express.json());
 app.use(
   cors({
@@ -38,7 +35,6 @@ app.use(
 app.use(cookieParser());
 app.use(passport.initialize());
 configureJwtStrategy(passport);
-app.use(compression());
 
 //-----------------------CONNECT DATABASE----------------------
 
@@ -56,22 +52,15 @@ mongoose
 //-----------------------ROUTES----------------------
 
 app.use("/api/users", userRoutes);
-app.use("/api/eco", contentRoutes);
-app.use("/api/badge", badgeRoutes);
+app.use("/api/content", contentRoutes);
 
 // Handling unhandled routes
 
 app.all("*", (req, res, next) => {
   next(new AppError(`Can not find ${req.originalUrl} on this server`, 404));
 });
-app.use(errorHandler);
 
-// Do not add code below this line!
-// Serve frontend client/build folder
-app.use(express.static(path.join(__dirname, "client/build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
-});
+app.use(errorHandler);
 
 //-----------------------APP----------------------
 

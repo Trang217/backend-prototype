@@ -10,7 +10,7 @@ module.exports = class Email {
     this.from =
       process.env.NODE_ENV === "production"
         ? `OIKO <${process.env.EMAIL_FROM_PROD}>`
-        : `OIKO <${process.env.EMAIL_FROM}>`;
+        : `OIKO <${process.env.EMAIL_FROM_DEV}>`;
   }
 
   newTransport() {
@@ -25,11 +25,11 @@ module.exports = class Email {
     }
 
     return nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: process.env.EMAIL_PORT,
+      host: process.env.EMAIL_HOST_DEV,
+      port: process.env.EMAIL_PORT_DEV,
       auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD,
+        user: process.env.EMAIL_USERNAME_DEV,
+        pass: process.env.EMAIL_PASSWORD_DEV,
       },
     });
   }
