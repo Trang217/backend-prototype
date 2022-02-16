@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
+const compression = require("compression");
 const dotenv = require("dotenv");
 const configureJwtStrategy = require("./passport-config");
 
@@ -37,6 +38,7 @@ app.use(
 app.use(cookieParser());
 app.use(passport.initialize());
 configureJwtStrategy(passport);
+app.use(compression());
 
 //-----------------------CONNECT DATABASE----------------------
 
