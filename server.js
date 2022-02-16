@@ -3,6 +3,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
@@ -62,6 +63,13 @@ app.all("*", (req, res, next) => {
   next(new AppError(`Can not find ${req.originalUrl} on this server`, 404));
 });
 app.use(errorHandler);
+
+// Do not add code below this line!
+// Serve frontend client/build folder
+app.use(express.static(path.join(__dirname, "client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
 
 //-----------------------APP----------------------
 

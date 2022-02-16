@@ -25,10 +25,6 @@ axiosApiInstance.interceptors.response.use(
   (error) => {
     console.log("Error response has been received", error.response);
 
-    if (error.response.status === 401) {
-      window.location = "/logout";
-    }
-
     return Promise.reject(error);
   }
 );

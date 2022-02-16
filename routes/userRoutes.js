@@ -20,4 +20,11 @@ router.get("/profile", controller.profile);
 
 router.get("/badges", controller.getUserBadges);
 router.patch("/update/badges/:type", controller.updateBadges);
+
+// update user account
+router.patch("/update/firstName", controller.updateFirstName);
+router.patch("/update/userName", controller.updateUsername);
+router.patch("/update/email", controller.updateEmail);
+router.patch("/update/password", controller.updatePassword);
+
 module.exports = router;

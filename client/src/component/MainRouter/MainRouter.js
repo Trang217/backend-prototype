@@ -6,6 +6,8 @@ import AccountDetail from "../AccountDetail/AccountDetail";
 import Navigation from "../Navigation/Navigation";
 import ProtectedRoute from "../Navigation/ProtectedRoute";
 import { AuthContext, AuthProvider } from "../../context/AuthContext";
+import ForgetPassword from "../ForgetPassword/ForgetPassword";
+import ResetPassword from "../ForgetPassword/ResetPassword";
 
 const MainRouter = () => {
   const { loggedIn } = useContext(AuthContext);
@@ -17,6 +19,9 @@ const MainRouter = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
+          <Route path="/forgetPassword" element={<ForgetPassword />} />
+          <Route path="/forgetPassword" element={<ResetPassword />} />
+
           <Route
             path="/profile"
             element={
